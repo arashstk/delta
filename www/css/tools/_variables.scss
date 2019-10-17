@@ -24,16 +24,16 @@ $colors: (
 /// @require {$colors}
 /// @type Map
 $theme-colors: (
-  'primary': map-get($colors, 'blue'),
-  'secondary': map-get($colors, 'gray'),
-  'success': map-get($colors, 'green'),
-  'info': map-get($colors, 'cyan'),
-  'warning':  map-get($colors, 'yellow'),
-  'danger':  map-get($colors, 'red'),
-  'light':  map-get($colors, 'gray-light'),
-  'dark':  map-get($colors, 'gray-dark'),
-  'muted':  map-get($colors, 'gray')
-  );
+    'primary': map-get($colors, 'blue'),
+    'secondary': map-get($colors, 'gray'),
+    'success': map-get($colors, 'green'),
+    'info': map-get($colors, 'cyan'),
+    'warning':  map-get($colors, 'yellow'),
+    'danger':  map-get($colors, 'red'),
+    'light':  map-get($colors, 'gray-light'),
+    'dark':  map-get($colors, 'gray-dark'),
+    'muted':  map-get($colors, 'gray')
+);
 // Learn about maps and map-get: https://sass-lang.com/documentation/values/maps
 
 /// Font family
