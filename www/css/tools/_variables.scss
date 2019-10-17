@@ -63,10 +63,10 @@ $navbar-height: 64px; // Placeholder value
 /// @see {mixin} responsive
 /// @type Map
 $grid-breakpoints: (
-    'sm': 576,  // Landscape phone
-    'md': 768,  // Tablet
-    'lg': 992,  // Laptop / Landscape tablet
-    'xl': 1200  // Desktop
+    'sm': 576px,  // Landscape phone
+    'md': 768px,  // Tablet
+    'lg': 992px,  // Laptop / Landscape tablet
+    'xl': 1200px  // Desktop
 );
 
 /// Grid gutter spacing (space between columns, rows and containers)
