@@ -24,16 +24,17 @@ $colors: (
 /// @require {$colors}
 /// @type Map
 $theme-colors: (
-    'primary': map-get($colors, 'blue'),
-    'secondary': map-get($colors, 'gray'),
-    'success': map-get($colors, 'green'),
-    'info': map-get($colors, 'cyan'),
-    'warning':  map-get($colors, 'yellow'),
-    'danger':  map-get($colors, 'red'),
-    'light':  map-get($colors, 'gray-light'),
-    'dark':  map-get($colors, 'gray-dark'),
-    'muted':  map-get($colors, 'gray')
-);
+  'primary': map-get($colors, 'blue'),
+  'secondary': map-get($colors, 'gray'),
+  'success': map-get($colors, 'green'),
+  'info': map-get($colors, 'cyan'),
+  'warning':  map-get($colors, 'yellow'),
+  'danger':  map-get($colors, 'red'),
+  'light':  map-get($colors, 'gray-light'),
+  'dark':  map-get($colors, 'gray-dark'),
+  'muted':  map-get($colors, 'gray')
+  );
+// Learn about maps and map-get: https://sass-lang.com/documentation/values/maps
 
 /// Font family
 /// @type List - All of the fonts that the browser should attempt to use (in order)
@@ -65,13 +66,18 @@ $grid-breakpoints: (
     'sm': 576,  // Landscape phone
     'md': 768,  // Tablet
     'lg': 992,  // Laptop / Landscape tablet
-    'xl': 1200 // Desktop
+    'xl': 1200  // Desktop
 );
 
-/// Grid gutter spacing (space between columns, rows and container)
+/// Grid gutter spacing (space between columns, rows and containers)
+/// Basically instead of a narrow grid such as ■■■ it instead becomes ■ ■ ■
 /// @type Number
 $grid-gutter: 24px; // Placeholder value
+// Rows are wrappers for columns. Each column has horizontal padding (called a gutter) for controlling the space between them. 
+// This padding is then counteracted on the rows with negative margins. 
+// This way, all the content in your columns is visually aligned down the left side.
+// source: https://getbootstrap.com/docs/4.0/layout/grid/#how-it-works
 
 /// Grid columns
-/// @type Number - Max amount of columns in the grid
+/// @type Number - Max amount of horizontal columns in the grid
 $grid-columns: 12;
