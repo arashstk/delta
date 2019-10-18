@@ -1,0 +1,16 @@
+/// Gets a color from our predefined theme
+/// @require {$theme-colors-all}
+/// @param {Color} $color - Color name
+/// @return {Color} - Color value
+@function get-color($color) {
+  // Throw error if color does not exist in theme
+  @if not map-has-key($theme-colors-all, $color) {
+    @error '$color: #{$color} does not exist in theme';
+  }
+  
+  // Get color value from theme
+  $result: map-get($theme-colors-all, $color);
+
+  // Return color value
+  @return $result;
+}

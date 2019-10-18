@@ -34,7 +34,11 @@ $theme-colors: (
     'dark':  map-get($colors, 'gray-dark'),
     'muted':  map-get($colors, 'gray')
 );
-// Learn about maps and map-get: https://sass-lang.com/documentation/values/maps
+
+// Merge the previous two maps together to form a map containing all of the items
+$theme-colors-all: map-merge($theme-colors, $colors);
+
+// Learn more about maps, map-get and map-merge: https://sass-lang.com/documentation/values/maps
 
 /// Font family
 /// @type List - All of the fonts that the browser should attempt to use (in order)
