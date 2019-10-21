@@ -1,0 +1,49 @@
+footer {
+  background-color: #181D26;
+  color: white;
+  padding: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer h3,
+footer h4,
+footer section {
+  margin-bottom: 10px;
+}
+
+footer h3 a:hover,
+footer h4 a:hover,
+footer section a:hover {
+  color: #FBEA26;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+/*# sourceMappingURL=main.css.map */
