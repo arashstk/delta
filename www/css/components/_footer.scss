@@ -1,20 +1,45 @@
-footer {
-    background-color: #181D26;
-    color: white;
-    padding: 10px;
+
+.footer {
+    background-color: get-color('blue');
+    color: get-color('white');
 
     a {
         text-decoration: none;
-        color: white;
+        color: get-color('white');
     }
 
+    h2,
     h3,
-    h4,
     section {
         margin-bottom: 10px;
         a:hover {
-            color: #FBEA26;
+            color: get-color('yellow');
         }
     }
 
+    h2 {
+        font-size: 14px;
+    }
+
+    h3,
+    p {
+        font-size: 12px;
+    }
+
+    &__container {
+        display: flex;
+    flex-flow: column nowrap;
+    padding: 10px 10px 0 10px;
+
+    @include responsive('md') {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+     }
+    }
+
+    &__bottom {
+        background-color: get-color('black');
+        flex-flow: row wrap;
+        text-align: center;
+    }
 }
