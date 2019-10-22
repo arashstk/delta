@@ -1,0 +1,34 @@
+.btn {
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-family: $font-family;
+    color: get-color('white');
+    background: get-color('gray-dark');
+    border-radius: 4px;
+
+   
+    &--sm {
+        padding: 3px 12px;
+        font-size: 10px;
+        
+    }
+
+    &--md {
+        padding: 5px 20px;
+        font-size: 12px;
+        
+    }
+
+    &--lg {
+        padding: 10px 30px;
+        font-size: 14px;
+       
+    }
+}
+
+.btn:hover {
+    background: get-color('gray-light');
+    
+}
