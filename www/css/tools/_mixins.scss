@@ -62,7 +62,7 @@
 /// @param {String | List} $properties - Properties that will be set
 /// @param {Map} $values - Values that will be set
 /// @param {String} $infix - Infix, classname-sm, classname-md ... classname-1, classname-2 ...
-@mixin generate-utility($property-class, $properties, $values, $infix: null) {
+@mixin generate-utility($property-class, $properties, $values, $infix: null, $important: true) {
     // Loop through values
     @each $modifier, $value in $values {
         // Create class - .classname-modifier or .classname-infix-modifier
@@ -70,7 +70,7 @@
             // Loop through properties
             @each $property in $properties {
                 // Set property and assign value, uses !important to override other values
-                #{$property}: #{$value} !important;
+                #{$property}: #{$value} if($important, !important, null);
             }
         }
     }
