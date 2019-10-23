@@ -59,46 +59,45 @@
 
 // Loop through all breakpoint sizes
 @each $threshold, $width in $grid-breakpoints {
-    // Avoid min-width: 0 breakpoints
-    @if $width != 0 {
-        .col-#{$threshold},
-        .col-#{$threshold}-auto {
-            // Extend the placeholder selector
+    $infix: if($width == 0, '', '-#{$threshold}');
+
+    .col#{$infix},
+    .col#{$infix}-auto {
+        // Extend the placeholder selector
+        @extend %column;
+    }
+
+    // Loop through grid column amount
+    @for $iteration from 1 through $grid-columns {
+        // 100% width columns before breakpoint sizes
+        .col#{$infix}-#{$iteration} {
             @extend %column;
         }
+    }
 
-        // Loop through grid column amount
-        @for $iteration from 1 through $grid-columns {
-            // 100% width columns before breakpoint sizes
-            .col-#{$threshold}-#{$iteration} {
-                @extend %column;
+    // Create a media query for each breakpoint size
+    @include create-breakpoint-up($threshold) {
+        // Create .col-sm, .col-md ...
+        .col#{$infix} {
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+
+            // Create .col-auto class - automatically resizes to fit
+            &-auto {
+                flex-basis: auto;
+                max-width: 100%;
+                width: auto;
             }
         }
 
-        // Create a media query for each breakpoint size
-        @include create-breakpoint-up($threshold) {
-            // Create .col-sm, .col-md ...
-            .col-#{$threshold} {
-                flex-basis: 0;
-                flex-grow: 1;
-                max-width: 100%;
-
-                // Create .col-auto class - automatically resizes to fit
-                &-auto {
-                    flex-basis: auto;
-                    max-width: 100%;
-                    width: auto;
-                }
-            }
-
-            // Loop through the amount of grid columns
-            @for $iteration from 1 through $grid-columns {
-                // Create .col-1, .col-2 ... .col-sm-1, .col-sm-2 ... 
-                .col-#{$threshold}-#{$iteration} {
-                    // 12 columns = 8.3333333333% * 2, * 3, * 4 and so on
-                    flex-basis: (100% / $grid-columns) * $iteration;
-                    max-width: (100% / $grid-columns) * $iteration;
-                }
+        // Loop through the amount of grid columns
+        @for $iteration from 1 through $grid-columns {
+            // Create .col-1, .col-2 ... .col-sm-1, .col-sm-2 ... 
+            .col#{$infix}-#{$iteration} {
+                // 12 columns = 8.3333333333% * 2, * 3, * 4 and so on
+                flex-basis: (100% / $grid-columns) * $iteration;
+                max-width: (100% / $grid-columns) * $iteration;
             }
         }
     }
