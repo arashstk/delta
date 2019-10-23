@@ -1,0 +1,32 @@
+.card {
+    color: get-color('white');
+    background-color: get-color('blue');
+    border-radius: 2px;
+    line-height: 1.6;
+    margin: 5px;
+    transition: border 2s;
+    font-family: $font-family;
+    
+    :hover {
+        
+    }
+    
+    &__title {
+        
+    }
+
+    // sm, md, lg, xl
+    @include create-breakpoint('sm') {
+        padding: 15px;
+        font-size: $font-family;
+    }
+
+    @include create-breakpoint('md') {
+        padding: 18px;
+    }
+
+    @include create-breakpoint('lg') {
+        padding: 23px;
+    }
+    
+}
