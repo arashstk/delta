@@ -1,3 +1,5 @@
+// This file is not in SassDoc-style since it just generates a bunch of stuff
+
 // Alignment
 $align: (
     'start': flex-start,
@@ -77,9 +79,16 @@ $align-content: (
         @include generate-utility('order', 'order', ('first': -1), $breakpoint);
         @include generate-utility('order', 'order', ('last': 13), $breakpoint);
 
-        // Generate order classes from .order-0 to .order-12
-        @for $iteration from 0 through 12 {
+        @for $iteration from 0 through $grid-columns {
+            // Generate order classes from .order-0 to .order-12
             @include generate-utility('order', 'order', ($iteration: $iteration), $breakpoint);
+
+            // Check if iteration is less than grid column amount to prevent .offset-12
+            // Also check if infix is not empty and iteration is not 0 to prevent .offset-0
+            @if ($iteration < $grid-columns) and not ($breakpoint == '' and $iteration == 0) {
+                // Generate offset classes without !important
+                @include generate-utility('offset', 'margin-left', ($iteration: (100% / $grid-columns) * $iteration), $breakpoint, false);
+            }
         }
     }
 }
