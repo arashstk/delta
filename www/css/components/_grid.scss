@@ -13,11 +13,7 @@
     margin-right: auto;
     margin-left: auto;
 
-    // Fluid modifier - Full width container
-    &--fluid {
-        max-width: 100%;
-    }
-
+    
     // Loop through all breakpoint sizes
     @each $threshold, $width in $grid-breakpoints {
         // Create media query for each size with a width greater than 0 (max-width: 0 != sense)
@@ -26,6 +22,11 @@
                 max-width: $width;
             }
         }
+    }
+    
+    // Fluid modifier - Full width container
+    &--fluid {
+        max-width: 100%;
     }
 }
 
