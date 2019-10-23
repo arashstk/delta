@@ -7,10 +7,20 @@
 html,
 body {
     line-height: 1.5;
+    font-family: $font-family;
     // upcoming code is meant to push down the footer in any situation
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family-alt;
 }
 
 main {
