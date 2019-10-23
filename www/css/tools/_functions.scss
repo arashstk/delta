@@ -1,16 +1,28 @@
 /// Gets a color from our predefined theme
 /// @require {$theme-colors-all}
 /// @param {Color} $color - Color name
+/// @param {Number} $alpha - Alpha value
 /// @return {Color} - Color value
-@function get-color($color) {
-  // Throw error if color does not exist in theme
-  @if not map-has-key($theme-colors-all, $color) {
-    @error '$color: #{$color} does not exist in theme';
-  }
-  
-  // Get color value from theme
-  $result: map-get($theme-colors-all, $color);
+@function get-color($color, $alpha: null) {
+    // Throw error if color does not exist in theme
+    @if not map-has-key($theme-colors-all, $color) {
+        @error '$color: #{$color} does not exist in theme';
+    }
 
-  // Return color value
-  @return $result;
+    // Get color value from theme
+    $result: map-get($theme-colors-all, $color);
+
+    // Check if $alpha is set
+    @if $alpha {
+        // Throw error if alpha is not a number
+        @if (type-of($alpha) != 'number') {
+            @error '$alpha: #{$alpha} is not a number';
+        }
+
+        // Get RGBA value if $alpha is set
+        $result: change-color($result, $alpha: $alpha);
+    }
+
+    // Return color value
+    @return $result;
 }

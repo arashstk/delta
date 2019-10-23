@@ -46,11 +46,11 @@ $theme-colors-all: map-merge($theme-colors, $colors);
 
 /// Font family
 /// @type List - All of the fonts that the browser should attempt to use (in order)
-$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; // Placeholder font
+$font-family: 'Nunito', sans-serif;
 
 /// Alternative font family (used primarily for h1-h6)
 /// @type List
-$font-family-alt: georgia, sans-serif; // Placeholder font
+$font-family-alt: 'Montserrat', sans-serif;
 
 /// Font size baseline value
 /// @type Number
