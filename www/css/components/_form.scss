@@ -13,5 +13,5 @@
 
 input:focus {
   outline: 4px;
-  border-color: #718096;	
+  border-color: get-color('gray');
 }
