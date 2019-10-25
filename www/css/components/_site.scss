@@ -29,45 +29,47 @@ main {
     font-weight: 300;
 }
 
-
 // Headings
-@for $iteration from 6 through 1 {
-    h#{$iteration},
-    .h#{$iteration} {
-        font-family: $font-family-alt;
-        font-weight: bold;
-        line-height: 1.2;
-        margin-bottom: 12px;
-        overflow-wrap: break-word;
-    }
+%headings {
+    font-family: $font-family-alt;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    overflow-wrap: break-word;
 }
 
 h6,
 .h6 {
-  font-size: 16px;
+    @extend %headings;
+    font-size: 16px;
 }
 
 h5,
 .h5 {
-  font-size: 19px;
+    @extend %headings;
+    font-size: 19px;
 }
 
 h4,
 .h4 {
-  font-size: 23px;
+    @extend %headings;
+    font-size: 23px;
 }
 
 h3,
 .h3 {
-  font-size: 28px;
+    @extend %headings;
+    font-size: 28px;
 }
 
 h2,
 .h2 {
-  font-size: 33px;
+    @extend %headings;
+    font-size: 33px;
 }
 
 h1,
 .h1 {
-  font-size: 40px;
+    @extend %headings;
+    font-size: 40px;
 }
