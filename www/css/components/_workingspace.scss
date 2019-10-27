@@ -1,0 +1,20 @@
+a:link {
+    text-decoration: none;
+}
+
+.col {
+
+    // sm, md, lg, xl
+    @include create-breakpoint('sm') {
+        
+    }
+
+    @include create-breakpoint('md') {
+        padding: 20px;
+    }
+
+    @include create-breakpoint('lg') {
+        padding: 22px;
+    }
+
+}
