@@ -7,9 +7,10 @@
     transition: border 2s;
     font-family: $font-family;
     
-    
-    i {
-        color: get-color('');
+    &:hover {
+        i {
+            color: get-color('yellow');
+        }
     }
     
     &__title {
@@ -18,7 +19,7 @@
 
     // sm, md, lg, xl
     @include create-breakpoint('sm') {
-        padding: 22px;
+        padding: 15px;
         font-size: $font-family;
     }
 
@@ -31,5 +32,7 @@
     }
     
 }
+
+
 
 
