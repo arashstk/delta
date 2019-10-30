@@ -1,7 +1,8 @@
 .btn {
     // Prevents the button from being able to be split in half 
     // when it can't fit inside of a container
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     
     cursor: pointer;
     transition: 0.2s ease;
@@ -42,6 +43,7 @@
     }
 
     &:hover {
+        color: get-color('white');
         background: get-color('gray');
     }
 
