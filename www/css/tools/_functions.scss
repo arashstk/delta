@@ -26,3 +26,12 @@
     // Return color value
     @return $result;
 }
+
+/// Calculate scale for parallax component
+/// https://developers.google.com/web/updates/2016/12/performant-parallaxing#adjusting_scale_for_perspective
+/// @param {Number} $z-distance - Distance
+/// @param {Number} $perspective - Perspective
+/// @return {Number} - Scale
+@function parallax-scale-factor($z-distance, $perspective: $parallax-perspective) {
+  @return ($perspective - $z-distance) / $perspective;
+}

@@ -1,24 +1,15 @@
-body {
-    background-color: get-color('gray-light');
-}
-
 .workingspace {
     margin-top: 15px;
-}
 
-.col {
+    .col {
+        // sm, md, lg, xl
+        @include create-breakpoint('sm') {
+        }
 
-    // sm, md, lg, xl
-    @include create-breakpoint('sm') {
-        
+        @include create-breakpoint('md') {
+        }
+
+        @include create-breakpoint('lg') {
+        }
     }
-
-    @include create-breakpoint('md') {
-        
-    }
-
-    @include create-breakpoint('lg') {
-        
-    }
-
 }

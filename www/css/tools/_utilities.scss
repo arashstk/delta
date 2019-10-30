@@ -18,6 +18,7 @@ $align-content: (
 // Generate color modifiers
 @include generate-utility('text-', 'color', $theme-colors-all);
 @include generate-utility('bg-', 'background-color', $theme-colors-all);
+@include generate-utility('font-weight', 'font-weight', ('bold': 700, 'medium': 500, 'normal': 400, 'light': 300));
 
 @each $threshold, $width in $grid-breakpoints {
     @include create-breakpoint-up($threshold) {
