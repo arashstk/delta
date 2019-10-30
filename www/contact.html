@@ -175,22 +175,22 @@
         <!-- Confused about the py, col and all other classes? Read the project handbook! -->
         <main role="main">
             <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-2 col-lg-2  ">
+                <div class="row bg--white">
+                    <div class="col-4 col-lg-2  ">
                         <img
                             src="./media/aside_banners/myh_anmalbrister.png"
                             alt="Länk till Anmäl brister i en utbildning"
                         />
                     </div>
 
-                    <div class="col-2 col-lg-2">
+                    <div class="col-4 col-lg-2">
                         <img
                             src="./media/aside_banners/myh_storpil_hittattbildningar.png"
                             alt="Länk till Hitta Utbildningar"
                         />
                     </div>
 
-                    <div class="col-2 col-lg-2">
+                    <div class="col-4 col-lg-2">
                         <img src="media/aside_banners/myh_storpil_jobba.png" alt="Länk till Jobba hos oss" />
                     </div>
                 </div>
@@ -200,11 +200,15 @@
                 <div class="example__fake-parallax container container--fluid">
                     <div class="container bg--white text--gray-dark">
                         <div class="row py-1 py-lg-3">
-                            <div class="col-12">
+                            <div class="card col-12">
+                                <h2>Kontakta oss</h2>
                                 <img
                                     src="./media/contact-media/contact_us.jpg"
                                     alt="Pratbubblor med telefon-, snabel-a och mailsymboler"
                                 />
+                                <h3 class="lead">
+                                    Här hittar du kontaktuppgifter till oss på Myndigheten för yrkeshögskolan.
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -235,7 +239,6 @@
 
                     <!-- Content goes here -->
                     <section class="col bg--white">
-                        <h2>Aktuellt</h2>
                         <div class="row">
                             <article class="col col-lg-8 col-xl offset-lg-1 offset-xl-0">
                                 <h3 class="mb-1">Telefon</h3>
@@ -355,6 +358,21 @@
                                     handlingar och sparar dem i vårt diarium.
                                 </p>
                             </article>
+                        </div>
+                        <div>
+                            <form action="">
+                                <h3>Kontaktformulär</h3>
+                                <p>Namn</p>
+                                <input class="form-control" type="text" placeholder="full name" value="" />
+                                <p>E-post</p>
+                                <input class="form-control" type="email" placeholder="e-mail" value="" />
+                                <p>Meddelande</p>
+                                <textarea class="form-control" name="message" rows="10" cols="30"></textarea>
+                                <br />
+                                <button type="submit" class="btn">
+                                    Skicka
+                                </button>
+                            </form>
                         </div>
                     </section>
                 </div>
