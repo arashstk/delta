@@ -1,7 +1,4 @@
-.aboutus {
-    // p {
-    //     margin: 1em 0;
-    // }
+.content--style {
 
     img {
         max-width: 100%;
@@ -16,15 +13,26 @@
         text-decoration: none;
         color: get-color('black');
         display: block;
-        
-
-        &:hover {
-            background: get-color('gray-dark');
-            color: get-color('white');
-        }
+        font-weight: bold;
     }
 }
 
-.aboutbanner {
+.banner {
     max-height: 650px;
 }
+
+.links-sidebar a {
+   
+
+    &:hover {
+        background: get-color('gray-dark');
+        color: get-color('white');
+    }
+
+}
+
+.pdf--icon li {
+    list-style-image: url(/www/media/pdf-icon.png);
+    margin-left: 30px;
+}
+
