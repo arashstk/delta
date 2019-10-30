@@ -8,27 +8,29 @@
     background: get-color('gray-dark');
     border-radius: 4px;
 
-   
     &--sm {
         padding: 3px 12px;
         font-size: 10px;
-        
     }
 
     &--md {
         padding: 5px 20px;
         font-size: 12px;
-        
     }
 
     &--lg {
         padding: 10px 30px;
         font-size: 14px;
-       
+        display: block;
+        width: 100%;
     }
 }
 
 .btn:hover {
     background: get-color('gray-light');
-    
+}
+
+.btn--block {
+    display: block;
+    width: 100%;
 }
