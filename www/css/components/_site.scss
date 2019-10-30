@@ -13,11 +13,42 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: get-color('offwhite');
 }
 
 main {
     flex-grow: 1;
+}
+
+a {
+    text-decoration: none;
+    color: get-color('primary');
+
+    &:hover {
+        color: get-color('gray');
+    }
+}
+
+// Responsive images
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Visually hidden, for screenreaders
+.vhidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+}
+
+#chk-cookie:checked ~ #cookies {
+    display: none;
+}
+
+// Parallax image (Placeholder)
+#parallax::before {
+    background: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1082&q=80');
 }
 
 // Typography
@@ -25,8 +56,9 @@ main {
 
 .lead {
     font-family: $font-family-alt;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 300;
+    letter-spacing: .35px;
 }
 
 // Headings

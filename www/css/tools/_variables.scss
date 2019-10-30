@@ -2,10 +2,6 @@
 // Be careful when changing these values as they will
 // drastically alter the look of the entire project 
 
-/// Debug - Are we in debug mode or production mode?
-/// @type Bool
-$debug: true;
-
 // Theme
 //
 
@@ -91,3 +87,14 @@ $grid-gutter: 16px; // Placeholder value
 /// Grid columns
 /// @type Number - Max amount of horizontal columns in the grid
 $grid-columns: 12;
+
+// Parallax
+//
+
+/// Parallax perspective
+/// @type Number
+$parallax-perspective: 1px;
+
+/// Parallax distance
+/// @type Number
+$parallax-translate-z: -1px;
