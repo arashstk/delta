@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv" class="parallax">
+<html lang="sv">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,8 +7,9 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet" />
         <link type="text/css" rel="stylesheet" href="./css/main.css" />
-        <title>Myndigheten för yrkeshögskolan</title>
+        <title>Lagar, regler, tillsyn - Myndigheten för yrkeshögskolan</title>
     </head>
+
     <body>
         <!-- Header / Navbar -->
         <header class="header" role="banner">
@@ -107,10 +108,10 @@
                     <!-- Links -->
                     <li class="navbar__collapse">
                         <ul>
-                            <li class="navbar__item navbar__item--selected">
+                            <li class="navbar__item">
                                 <a href="#" class="navbar__link">Start</a>
                             </li>
-                            <li class="navbar__item">
+                            <li class="navbar__item navbar__item--selected">
                                 <a href="#" class="navbar__link">Om oss</a>
                             </li>
                             <li class="navbar__item">
@@ -137,6 +138,7 @@
                     <li class="navbar__actions col-4 col-lg-auto d-block text-right p-0">
                         <form class="d-inline-block" role="search">
                             <a href="#" class="navbar__button" role="button">
+                                <!-- svg is a placeholder for the actual icon-->
                                 <svg
                                     class="navbar__icon"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -170,211 +172,148 @@
                 </ul>
             </nav>
         </header>
+        <main role="main" class="aboutus">
+            <div class="container bg--white text--gray-dark">
+                <div class="row">
+                    <div class="col-4 col-lg-2  ">
+                        <img src="./media/aside_banners/myh_anmalbrister.png" alt="Anmäl brister i en utbildning" />
+                    </div>
 
-        <!-- All content goes here -->
-        <!-- Confused about the py, col and all other classes? Read the project handbook! -->
-        <main role="main">
-            <!-- Banner  -->
-            <!-- Don't use the style="" tag, it's only used for this example file -->
-            <!-- <div class="example__fake-parallax container container--fluid"> -->
-                        <div class="row">
-                            <div class="col-4 col-lg-2 p-0">
-                                <a href="#">
-                                    <img
-                                     src="./media/aside_banners/myh_anmalbrister.png" 
-                                    alt="Anmäl brister i en utbildning" /></a>
-                            </div>
-                
-                            <div class="col-4 col-lg-2 p-0">
-                                <a href="#">
-                                        <img
-                                    src="./media/aside_banners/myh_storpil_hittattbildningar.png"
-                                    alt="Länk till Hitta Utbildningar" /></a>
-                            </div>
-                
-                            <div class="col-4 col-lg-2 p-0">
-                                <a href="#">
-                                        <img
-                                    src="media/aside_banners/vagledare-banner-svart.png"
-                                    alt="Länk till För dig som är vägledare" /></a>
-                            </div>
-                            <div class="col-4 col-lg-2 p-0">
-                                <a href="#">
-                                        <img 
-                                        src="./media/aside_banners/myh_storpil_gdharordet.png" 
-                                        alt="Länk till GD har ordet" /></a>
-                            </div>
-                            <div class="col-4 col-lg-2 p-0">
-                                <a href="#">
-                                        <img
-                                    src="media/aside_banners/epale_banner.png"
-                                    alt="Länk till EPALE: Digital mötesplats för vuxenutbildningar" /></a>
-                            </div>
-                            <div class="col-4 col-lg-2 p-0">
-                                <a href="#">
-                                        <img
-                                    src="media/aside_banners/banner_ya-delegationen.png"
-                                    alt="Länk till YA-delegationens material" /></a>
-                            </div>
-                        </div>
-                
-                <div class="parallax__item container d-flex" id="parallax">
-                    <div class="parallax__static my-auto">
-                        <div class="row bg--white text--gray-dark mt-0">
-                            <div class="col-6 col-lg-4">
-                                <h4>Ansök om att bedriva utbildning</h4>
-                                <ul>
-                                    <li><a href="#">Yrkeshögskoleutbildning</a></li>
-                                    <li><a href="#">Konst- och kulturutbildning</a></li>
-                                    <li><a href="#">Tolkutbildning</a></li>
-                                    <li><a href="#">Utbildning med endast tillsyn</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-6 col-lg-4">
-                                <h4>För dig som bedriver utbildning</h4>
-                                <ul>
-                                    <li><a href="#">Yrkeshögskoleutbildning</a></li>
-                                    <li><a href="#">Konst- och kulturutbildning</a></li>
-                                    <li><a href="#">Tolkutbildning</a></li>
-                                    <li><a href="#">Utbildning med endast tillsyn</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-12 col-lg-4">
-                                <h4>För företag och organisationer</h4>
-                                <p>Arbetslivet är den främsta drivkraften bakom vilka yrkeshögskoleutbildningar som startar
-                                    och hur de är upplagda.</p> 
-                                </br>
-                                <a href="#"><b>Läs om hur du kan engagera dig och påverka utbildningarna inom yrkes- högskolan!</b></a>
-                            </div>
-                        </div>
-                        </div>
+                    <div class="col-4 col-lg-2">
+                        <img
+                            src="./media/aside_banners/myh_storpil_hittattbildningar.png"
+                            alt="Länk till Hitta Utbildningar"
+                        />
+                    </div>
+
+                    <div class="col-4 col-lg-2">
+                        <img
+                            src="media/aside_banners/vagledare-banner-svart.png"
+                            alt="Länk till För dig som är vägledare"
+                        />
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <img src="./media/aside_banners/myh_storpil_gdharordet.png" alt="Länk till GD har ordet" />
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <img
+                            src="media/aside_banners/epale_banner.png"
+                            alt="Länk till EPALE: Digital mötesplats för vuxenutbildningar"
+                        />
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <img
+                            src="media/aside_banners/banner_ya-delegationen.png"
+                            alt="Länk till YA-delegationens material"
+                        />
                     </div>
                 </div>
 
-                            
-                
-            <!-- </div> -->
-            <div class="parallax__static bg--offwhite">
-                    <div class="container">
-                        <div class="row">
-                    <!-- Sidebar - Hide sidebar below XL breakpoint -->
-                    <aside class="d-none d-xl-block col-xl-3 bg--primary order-last">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12 mb-3 bg--gray-dark text--white">
-                                    <h5>
-                                        <a href="#">Verksamhetsområden</a>
-                                    </h5>
-                                </div>
-                                <div class="col-12 mb-3 bg--gray-dark text--white">
-                                    <h5>
-                                        <a href="#">Kalender</a>
-                                    </h5>
-                                </div>
-                                <div class="col-12 mb-3 bg--gray-dark text--white">
-                                    <h5>
-                                        <a href="#">Gå direkt till</a>
-                                    </h5>
-                                </div>
-                                <div class="col-12 mb-3 bg--gray-dark text--white">
-                                    <h5>
-                                        <a href="#">Senaste Publikationer</a>
-                                    </h5>
+                <div class="container">
+                    <div class="row">
+                        <!-- Sidebar - Hide sidebar below XL breakpoint -->
+                        <aside role="complementary" class="d-none d-xl-block col-xl-3 bg--primary order-last">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 mb-3 bg--gray-light">
+                                        <h3 class="h5">Lagar, regler, tillsyn</h3>
+                                        <ul>
+                                            <li><a href="#">Lagar och förordningar</a></li>
+                                            <li><a href="#">Gällande föreskrifter</a></li>
+                                            <li><a href="#">Allmänna råd</a></li>
+                                            <li><a href="#">Tillsyn</a></li>
+                                            <li><a href="#">Kvalitetsgranskning</a></li>
+                                            <li><a href="#">Anmäl brister i en utbildning</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </aside>
-
-                    <!-- Content goes here -->
-                    <section class="col">
-                            <iframe 
-                            width="100%" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/iSa-YkIR9is" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                          </iframe>
-                        <h2>Aktuellt</h2>
-                       
-                           <!--  <article class="col col-lg-8 col-xl offset-lg-1 offset-xl-0">
-                                <h3 class="mb-1">
-                                    Ansök om statsbidrag för utbildning till teckenspråks- och dövblindtolk samt
-                                    skrivtolk
-                                </h3>
-                                <p class="text-gray-dark">
-                                    Nu kan folkhögskolor ansöka om statsbidrag för den fyraåriga teckenspråks- och
-                                    dövblindtolkutbildningen samt den ettåriga skrivtolkutbildningen.&hellip;
-                                </p>
-                                <p class="text--gray mt-1">17 oktober 2019</p>
-                            </article>
-                            <div class="col-auto my-auto">
-                                <img src="http://placekitten.com/150" alt="" />
-                            </div> -->
-
-
-                            <article role="article" class="media">
-                                <div class="media__content">
-                                    <h5>Ansök om statsbidrag för utbildning till teckenspråks- och dövblindtolk samt skrivtolk</h5>
-                                    <p>Nu kan folkhögskolor ansöka om statsbidrag för den fyraåriga teckenspråks- och
-                                       dövblindtolkutbildningen samt den ettåriga skrivtolkutbildningen&hellip;</p>
-                                    </br></br><p class="text--gray mt-1">17 oktober 2019</p>
+                        </aside>
+                        <!-- Content goes here -->
+                        <section role="region" class="col bg--white">
+                            <div class="row">
+                                <div class="col mr-auto">
+                                    <h2>Lagar, regler, tillsyn</h2>
                                 </div>
-                                <img src="../assets/photo-1455849318743-b2233052fcff.jpg" width="150px" hight="150px" class="media__image" alt="">
-                                
-                            </article>
-                        
+                                <div class="col-auto my-auto">
+                                    <!-- 'x x x' is a placeholder for the actual icon-->
+                                    <p>Dela: x x x</p>
+                                </div>
+                            </div>
 
-                            <article role="article" class="media">
-                                    <div class="media__content">
-                                        <h5>Informationsträff för vägledare</h5>
-                                        <p>Den 13 november anordnar myndigheten en träff för vägledare och välkomnar deltagarna till
-                                           en förmiddag med föreläsning och möjlighet till diskussion kring olika frågor&hellip;</p>
-                                        </br></br><p class="text--gray mt-1">15 oktober 2019</p>
-                                    </div>
-                                    <img src="../assets/photo-1494081307357-78e3fb01df9b.jpg" width="150px" hight="150px" class="media__image" alt="">
-                                    
+                            <div class="row">
+                                <div class="col-12 col-lg-6 mx-auto order-lg-last text-right">
+                                    <img class="d-none d-lg-inline" src="./media/law/law.jpg" alt="" />
+                                    <img
+                                        class="d-block d-lg-none aboutbanner"
+                                        src="./media/about_us/yh-lg.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <article role="article" class="col-12 col-lg-6 col-xl">
+                                    <h3 class="lead mb-1">
+                                        För alla utbildningsformer finns det lagar och andra bestämmelser som måste
+                                        följas. Det gäller till exempel hur utbildningarna ska utformas, kursplaner,
+                                        betygskriterier, examina, tillträde och avgifter.
+                                    </h3>
+                                    <p class="mb-1">
+                                        Här hittar du de
+                                        <a href="/Lagar-regler-och-tillsyn/Lagar-och-forordningar/">
+                                            lagar och förordningar
+                                        </a>
+                                        som reglerar de utbildningsformer som Myndigheten för yrkeshögskolan ansvarar
+                                        för. Här finns även de
+                                        <a href="/Lagar-regler-och-tillsyn/Foreskrifter/">föreskrifter</a>
+                                        som vi har beslutat om, samt de
+                                        <a href="/Lagar-regler-och-tillsyn/Allmanna-rad/">allmänna råd</a>
+                                        vi har gett ut.
+                                    </p>
+
+                                    <p class="mb-1">
+                                        Genom
+                                        <a href="/Lagar-regler-och-tillsyn/Tillsyn/">tillsyn</a>
+                                        kontrollerar myndigheten att utbildningarna följer de lagar och regler som
+                                        gäller. I menyn till höger kan du läsa om hur tillsynen går till och hitta
+                                        tillsynsbeslut.
+                                    </p>
+
+                                    <p class="mb-1">
+                                        Om du anser att det finns brister i en utbildning kan du anmäla det till oss.
+                                        <a href="/Lagar-regler-och-tillsyn/Anmal-brister-i-en-utbildning/">
+                                            Anmäl brister i en utbildning.
+                                        </a>
+                                    </p>
                                 </article>
-
-                                <article role="article" class="media">
-                                        <div class="media__content">
-                                            <h5>Hon jobbar med att göra YH mer känt och erkänt</h5>
-                                            <p>Maria Granberg är en tongivande YH-ambassadör. Idag arbetar hon på Handelskammaren där
-                                               hon leder satsningen Yrkeshögskola Mälardalen. Innan dess var hon handläggare på Myndigheten för yrkeshögskolan och&hellip;</p>
-                                            </br></br><p class="text--gray mt-1">1 oktober 2019</p>
-                                        </div>
-                                        <img src="../assets/photo-1538082978781-b3a4334fbe49.jpg" width="150px" hight="150px" class="media__image" alt="">
-                                        
-                                    </article>
-                    </section>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
         </main>
-
+        <!-- Footer -->
         <footer class="footer" role="contentinfo">
             <div class="footer__container">
                 <section role="region">
                     <h2>Kontakt</h2>
-                    <h3>Telefon</h3>
+                    <h3 class="h5">Telefon</h3>
                     <p>
                         Ring vår växel 010-209 01 00
                         <br />
                         Växeln är öppen vardagar 8.00 - 17.00
                     </p>
-                    <h3>Digital kundforum</h3>
+                    <h3 class="h5">Digital kundforum</h3>
                     <p>
                         Se vanliga frågor och svar eller ställ frågor:
                         <br />
                         <a href="https://forum.myh.se/org/myndigheten-for-yrkeshogskola/">forum.myh.se</a>
                     </p>
-                    <h3>E-Post</h3>
+                    <h3 class="h5">E-Post</h3>
                     <p>
                         Allmänna frågor/synpunkter: info@myh.se
                         <br />
                         Registrator: registrator@myh.se
                     </p>
-                    <h3>Adress</h3>
+                    <h3 class="h5">Adress</h3>
                     <p>
                         Myndigheten för yrkeshögskolan
                         <br />

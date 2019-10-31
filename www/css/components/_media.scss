@@ -5,8 +5,8 @@
     padding: 16px;
     border-radius: 4px;
     background: get-color('white');
-    box-shadow: 0px 2px 2px 0px get-color('black', 0.08), 
-                0px 1px 5px 0px get-color('black', 0.04);    
+    box-shadow: 0px 2px 2px 0px get-color('black', 0.08), 0px 1px 5px 0px get-color('black', 0.04);
+    width: 100%;
 
     // Media component followed by another media component
     & + & {
@@ -20,7 +20,7 @@
     // Nested media components
     &__content > & {
         box-shadow: none;
-    }    
+    }
 
     // Image is after content
     &__content + &__image {
