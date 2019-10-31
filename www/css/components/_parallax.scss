@@ -14,16 +14,16 @@
         scroll-behavior: smooth;
     }
 
-    &-static {
+    &__static {
         // Edge fix
-        z-index: -1;
+        z-index: 0;
 
         position: relative;
     }
 
-    &-item {
+    &__item {
         height: auto;
-        
+
         @include create-breakpoint('md') {
             height: 100vh;
         }

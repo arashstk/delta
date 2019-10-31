@@ -2,17 +2,6 @@ ul {
     list-style: none;
 }
 
-.link {
-    text-decoration: none;
-    color: get-color('white');
-    display: block;
-
-    &:hover {
-        cursor: pointer;
-        color: get-color('yellow');
-    }
-}
-
 .ow-break {
     overflow-wrap: break-word;
 }
