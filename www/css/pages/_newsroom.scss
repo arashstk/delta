@@ -1,90 +1,40 @@
 .newsroom {
-  img {
-      // max-width: 100%;
-      // height: auto;
-  }
   ul {
-      list-style: none;
-
-      
+      list-style: none; 
   }
-  a {
-      text-decoration: none;
-      color: get-color('black');
-      display: block;
-      
 
-      &:hover {
-          background: get-color('gray-dark');
-          color: get-color('white');
+  #accordion {
+
+    #latest,
+    #press,
+    #calendar {
+      display: none;
+      overflow: hidden;
+    }
+
+    #chk-latest,
+    #chk-press,
+    #chk-calendar {
+      display: none;
+    }
+
+    #chk-latest:checked ~ label[for=chk-latest],
+    #chk-press:checked ~ label[for=chk-press],
+    #chk-calendar:checked ~ label[for=chk-calendar] {
+        color: get-color('gray');
       }
+
+    #chk-latest:checked ~ #latest,
+    #chk-press:checked ~ #press,
+    #chk-calendar:checked ~ #calendar {
+        display: block;
+      }
+
+    label[for=chk-latest],
+    label[for=chk-press],
+    label[for=chk-calendar] {
+      cursor: pointer;
+      user-select: none;
+    }
   }
-  .btn,
-  .h3 {
-    font-size: 10px;
-    // Tablet
-    @include create-breakpoint('sm') {
-      
-    }
-    // Laptop
-    @include create-breakpoint('md') {
-      
-    }
-    // Desktop
-    @include create-breakpoint('lg') {
-      font-size: 24px;
-    } 
-  }
-  .btn--lg {
-    padding: 10px 10px;
-    // Tablet
-    @include create-breakpoint('sm') {
-      
-    }
-    // Laptop
-    @include create-breakpoint('md') {
-      
-    }
-    // Desktop
-    @include create-breakpoint('lg') {
-      
-    } 
-  }
-}
-
-#accordion input {
-	display: none;
-}
-// #accordion div {
-//   // height:0px;
-//   display: none;
-// 	overflow:hidden;
-// }
-// #accordion #check-1:checked ~ #latest {
-// 	height: auto;
-// }
-
-// #accordion #check-2:checked ~ #press {
-// 	height: auto;
-// }
-
-// #accordion #check-3:checked ~ #calendar {
-// 	height: auto;
-// }
-
-
-
-
-
-.image-row {
-  width: 125px !important;
-  height: 125px !important;
-}
-
-.view-width {
-  width: 100vw;
-}
-
-.font-weight-bold {
-  font-weight: bold;
 }
