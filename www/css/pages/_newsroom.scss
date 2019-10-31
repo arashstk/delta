@@ -12,12 +12,6 @@
       overflow: hidden;
     }
 
-    #chk-latest,
-    #chk-press,
-    #chk-calendar {
-      display: none;
-    }
-
     #chk-latest:checked ~ label[for=chk-latest],
     #chk-press:checked ~ label[for=chk-press],
     #chk-calendar:checked ~ label[for=chk-calendar] {
