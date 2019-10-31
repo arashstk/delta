@@ -55,15 +55,36 @@
 #accordion input {
 	display: none;
 }
-#accordion article {
-	height:0px;
-	overflow:hidden;
-}
-#accordion input:checked ~ article {
-	height: auto;
-}
+// #accordion div {
+//   // height:0px;
+//   display: none;
+// 	overflow:hidden;
+// }
+// #accordion #check-1:checked ~ #latest {
+// 	height: auto;
+// }
+
+// #accordion #check-2:checked ~ #press {
+// 	height: auto;
+// }
+
+// #accordion #check-3:checked ~ #calendar {
+// 	height: auto;
+// }
+
+
+
+
 
 .image-row {
   width: 125px !important;
   height: 125px !important;
+}
+
+.view-width {
+  width: 100vw;
+}
+
+.font-weight-bold {
+  font-weight: bold;
 }
