@@ -3,6 +3,10 @@
     color: get-color('white');
     font-family: $font-family;
 
+    i {
+        color: get-color('info');
+    }
+
     a {
         text-decoration: none;
         color: get-color('white');
@@ -13,14 +17,32 @@
         }
     }
 
-
     h2 {
-        font-size: 14px;
+        font-weight: 300;
+        font-size: 16px;
+
+        @include create-breakpoint('xl') {
+            font-size: 18px;
+        }
+    }
+
+    h3 {
+        display: flex;
+        align-items: flex-end;
+        font-weight: 500;
     }
 
     h3,
     p {
         font-size: 12px;
+
+        @include create-breakpoint('xl') {
+            font-size: 14px;
+        }
+    }
+
+    p {
+        color: get-color('gray-light');
     }
 
     &__icon {
@@ -31,11 +53,11 @@
     &__container {
         display: flex;
         flex-flow: column nowrap;
-        padding: 10px;
+        padding: 48px 24px;
 
-        @include create-breakpoint('md') {
+        @include create-breakpoint('sm') {
             flex-flow: row nowrap;
-            justify-content: space-around;
+            justify-content: space-between;
         }
     }
 
@@ -43,7 +65,6 @@
         background-color: get-color('black');
         flex-flow: row wrap;
         text-align: center;
-        padding: 10px;
+        padding: 24px;
     }
-
 }

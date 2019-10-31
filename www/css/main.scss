@@ -15,9 +15,16 @@
 @import 'components/footer';
 @import 'components/form';
 @import 'components/media';
+@import 'components/pagination';
+@import 'components/parallax';
+@import 'components/alert';
+@import 'components/material-icons';
 
 // Pages
 @import 'pages/example';
+@import 'pages/index';
 @import 'pages/aboutus';
+@import 'pages/statistics';
+@import 'pages/publications';
 @import 'pages/workingspace';
-@import 'pages/contactstyle';
+@import 'pages/contact';
