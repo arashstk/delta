@@ -14,10 +14,28 @@
         <title>Kontaktinformation - Myndigheten för yrkeshögskolan</title>
     </head>
     <body>
-        <!-- Header / Navbar -->
-        <header class="header" role="banner">
+        <header role="banner" class="header">
+            <input type="checkbox" id="chk-cookie" class="vhidden" />
+            <div role="alert" id="cookies" class="alert">
+                <div class="container row">
+                    <div class="alert__content col-auto offset-lg-1 offset-xl-2">
+                        <h2 class="h4 font-weight-medium mb-1 mb-sm-0 ">Vi använder cookies</h2>
+                        <p>
+                            Genom att fortsätta använda myh.se godkänner du detta.
+                            <br />
+                            <a href="https://www.myh.se/Om-webbplatsen/Webbkakor-pa-den-har-webbplatsen/">
+                                Läs mer om cookies här
+                            </a>
+                        </p>
+                    </div>
+                    <div class="alert__buttons col-auto offset-lg-2 align-self-center mr-3">
+                        <label for="chk-cookie" class="btn btn--lg bg--info">Jag accepterar</label>
+                    </div>
+                </div>
+            </div>
+
             <nav class="navbar navbar__tools">
-                <div class="offset-5 col-2 d-none d-lg-block text-center">
+                <h1 class="offset-5 col-2 d-none d-lg-block text-center">
                     <a href="/">
                         <img
                             src="./media/logo.svg"
@@ -25,75 +43,37 @@
                             alt="Myndigheten för yrkeshögskolan"
                         />
                     </a>
-                </div>
+                </h1>
 
                 <ul class="navbar__content col-5 d-flex">
                     <li class="navbar__item">
-                        <a href="#" class="navbar__link">EN</a>
+                        <a href="#" class="navbar__link d-none d-lg-inline" aria-label="Engelska">
+                            EN
+                        </a>
                     </li>
                     <li class="navbar__item">
-                        <a href="#" class="navbar__link">
-                            <svg
-                                class="navbar__icon"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewbox="0 0 24 24"
-                            >
-                                <path d="M0 0h24v24H0z" fill="none" />
-                                <path
-                                    d="M9 7H7v2h2V7zm0 4H7v2h2v-2zm0-8c-1.11 0-2 .9-2 2h2V3zm4 12h-2v2h2v-2zm6-12v2h2c0-1.1-.9-2-2-2zm-6 0h-2v2h2V3zM9 17v-2H7c0 1.1.89 2 2 2zm10-4h2v-2h-2v2zm0-4h2V7h-2v2zm0 8c1.1 0 2-.9 2-2h-2v2zM5 7H3v12c0 1.1.89 2 2 2h12v-2H5V7zm10-2h2V3h-2v2zm0 12h2v-2h-2v2z"
-                                />
-                            </svg>
+                        <a href="#" class="navbar__link d-none d-lg-inline">
+                            <i class="material-icons md-18" aria-hidden="true">flip_to_back</i>
                             Lättläst
                         </a>
                     </li>
                     <li class="navbar__item">
-                        <a href="#" class="navbar__link">
-                            <svg
-                                class="navbar__icon"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewbox="0 0 24 24"
-                            >
-                                <path d="M0 0h24v24H0z" fill="none" />
-                                <path d="M9 4v3h5v12h3V7h5V4H9zm-6 8h3v7h3v-7h3V9H3v3z" />
-                            </svg>
+                        <a href="#" class="navbar__link d-none d-lg-inline">
+                            <i class="material-icons md-18" aria-hidden="true">format_size</i>
                             Anpassa
                         </a>
                     </li>
                 </ul>
             </nav>
 
-            <nav class="navbar" role="navigation">
-                <input type="checkbox" id="toggle" class="d-none" />
+            <nav role="navigation" class="navbar">
+                <input type="checkbox" id="toggle" class="vhidden d-lg-none" />
                 <ul class="navbar__content align-items-center justify-content-between">
                     <!-- Hamburger button -->
                     <li class="navbar__button col-4 d-lg-none">
                         <label for="toggle" class="navbar__toggle">
-                            <svg
-                                class="navbar__icon"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewbox="0 0 24 24"
-                            >
-                                <path d="M0 0h24v24H0z" fill="none" />
-                                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-                            </svg>
-                            <svg
-                                class="navbar__icon"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewbox="0 0 24 24"
-                            >
-                                <path
-                                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                                />
-                                <path d="M0 0h24v24H0z" fill="none" />
-                            </svg>
+                            <i class="material-icons" aria-hidden="true">menu</i>
+                            <i class="material-icons" aria-hidden="true">close</i>
                         </label>
                     </li>
 
@@ -111,192 +91,149 @@
                     <!-- Links -->
                     <li class="navbar__collapse">
                         <ul>
+                            <li class="navbar__item">
+                                <a href="/" class="navbar__link">Start</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="/om-oss" class="navbar__link">Om oss</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="/verksamhetsomraden" class="navbar__link">Verksamhetsområden</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="/lagar-regler-och-tillsyn" class="navbar__link">Lagar, regler, tillsyn</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="/statistik" class="navbar__link">Statistik</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="/publikationer" class="navbar__link">Publikationer</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="/nyhetsrum" class="navbar__link">Nyhetsrum</a>
+                            </li>
                             <li class="navbar__item navbar__item--selected">
-                                <a href="#" class="navbar__link">Start</a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="#" class="navbar__link">Om oss</a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="#" class="navbar__link">Verksamhetsområden</a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="#" class="navbar__link">Lagar, regler, tillsyn</a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="#" class="navbar__link">Statistik</a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="#" class="navbar__link">Publikationer</a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="#" class="navbar__link">Nyhetsrum</a>
-                            </li>
-                            <li class="navbar__item">
-                                <a href="#" class="navbar__link">Kontakt</a>
+                                <a href="/kontakt" class="navbar__link">Kontakt</a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="navbar__actions col-4 col-lg-auto d-block text-right p-0">
-                        <form class="d-inline-block" role="search">
-                            <a href="#" class="navbar__button" role="button">
-                                <svg
-                                    class="navbar__icon"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewbox="0 0 24 24"
-                                >
-                                    <path
-                                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                                    />
-                                    <path d="M0 0h24v24H0z" fill="none" />
-                                </svg>
+                        <form role="search" class="d-inline-block">
+                            <a role="button" href="#" class="navbar__button" aria-label="Sök">
+                                <i class="material-icons" aria-hidden="true">search</i>
                             </a>
                         </form>
 
-                        <a href="#" class="navbar__button" role="button">
-                            <svg
-                                class="navbar__icon navbar__icon--lg"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewbox="0 0 24 24"
-                            >
-                                <path
-                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
-                                />
-                                <path d="M0 0h24v24H0z" fill="none" />
-                            </svg>
+                        <a role="button" href="#" class="navbar__button" aria-label="Gå till mina sidor">
+                            <i class="material-icons md-36" aria-hidden="true">account_circle</i>
                         </a>
                     </li>
                 </ul>
             </nav>
         </header>
 
-        <!-- All content goes here -->
-        <!-- Confused about the py, col and all other classes? Read the project handbook! -->
-        <main role="main">
-            <div class="container">
-                <div class="row bg--white justify-content-between">
-                    <div class="col-4 col-lg-2  ">
-                        <img src="./media/aside_banners/myh_anmalbrister.png" alt="Anmäl brister i en utbildning" />
-                    </div>
-
-                    <div class="col-4 col-lg-2">
-                        <img
-                            src="./media/aside_banners/myh_storpil_hittattbildningar.png"
-                            alt="Länk till Hitta Utbildningar"
-                        />
-                    </div>
-
-                    <div class="col-4 col-lg-2">
-                        <img src="media/aside_banners/myh_storpil_jobba.png" alt="Länk till Jobba hos oss" />
-                    </div>
-
-                    <div class="col-4 col-lg-2">
-                        <img src="./media/aside_banners/myh_storpil_gdharordet.png" alt="Länk till GD har ordet" />
-                    </div>
-                    <div class="col-4 col-lg-2">
-                        <img
-                            src="media/aside_banners/epale_banner.png"
-                            alt="Länk till EPALE: Digital mötesplats för vuxenutbildningar"
-                        />
-                    </div>
-                    <div class="col-4 col-lg-2">
-                        <img
-                            src="media/aside_banners/banner_ya-delegationen.png"
-                            alt="Länk till YA-delegationens material"
-                        />
-                    </div>
+        <main role="main" class="contact container bg--white">
+            <section role="region" class="row justify-content-between">
+                <div class="col-4 col-lg-2">
+                    <img src="./media/aside_banners/myh_anmalbrister.png" alt="Anmäl brister i en utbildning" />
                 </div>
-                <div class="col-12 py-0">
-                            <p>
-                                <a href="/">Start</a>
-                                <span>/</span>
-                                Kontakta oss
-                            </p>
-                        </div>
+                <div class="col-4 col-lg-2">
+                    <img
+                        src="./media/aside_banners/myh_storpil_hittattbildningar.png"
+                        alt="Länk till Hitta Utbildningar"
+                    />
+                </div>
+                <div class="col-4 col-lg-2">
+                    <img src="media/aside_banners/myh_storpil_jobba.png" alt="Länk till Jobba hos oss" />
+                </div>
+                <div class="col-4 col-lg-2">
+                    <img src="./media/aside_banners/myh_storpil_gdharordet.png" alt="Länk till GD har ordet" />
+                </div>
+                <div class="col-4 col-lg-2">
+                    <img
+                        src="media/aside_banners/epale_banner.png"
+                        alt="Länk till EPALE: Digital mötesplats för vuxenutbildningar"
+                    />
+                </div>
+                <div class="col-4 col-lg-2">
+                    <img
+                        src="media/aside_banners/banner_ya-delegationen.png"
+                        alt="Länk till YA-delegationens material"
+                    />
+                </div>
+            </section>
+
+            <article class="container">
+                <section role="region" class="row">
+                    <p class="col-12 py-0">
+                        <a href="/">Start</a>
+                        <span>/</span>
+                        Kontakta oss
+                    </p>
+                </section>
                 <!-- Banner  -->
-                <div class="row py-1 py-lg-3 bg--white">
+                <section role="region" class="row">
                     <div class="col-12">
                         <h2>Kontakta oss</h2>
-                            <!-- 'x x x' is a placeholder for the actual icon-->
-                            <p>Dela: x x x</p>
-                        <img
-                            class="contact--headerpic"
-                            src="./media/contact-media/contact_us.jpg"
-                            alt="Pratbubblor med telefon-, snabel-a och mailsymboler"
-                        />
+                        <!-- 'x x x' is a placeholder for the actual icon-->
+                        <p>Dela: x x x</p>
+                        <img src="./media/contact-media/contact_us.jpg" alt="" />
 
-                        <h3 class="lead">
-                            <br />
+                        <h3 class="lead mt-1">
                             Här hittar du kontaktuppgifter till oss på Myndigheten för yrkeshögskolan.
                         </h3>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <!-- Content goes here -->
-            <div class="container">
                 <div class="row">
-                    <section class="col bg--white">
-                        <div class="row">
-                            <article class="col col-lg-8 col-xl">
-                                <h3 class="mb-1">Telefon</h3>
-                                <p class="text-gray-dark">
-                                    Ring vår växel 010-209 01 00 så hjälper vi dig med ditt ärende!
+                    <section role="region" class="col">
+                            <section role="region" class="mb-3">
+                                <h3 class="mb-1"><i class="material-icons md-dark mr-1" aria-hidden="true">phone</i>Telefon</h3>
+                                <p class="text--gray-dark">
+                                    Ring vår växel <a href="tel:0102090100">010-209 01 00</a> så hjälper vi dig med ditt ärende!
                                     <br />
                                     Växeln är öppen vardagar kl 8.00-17.00.
                                 </p>
-                            </article>
-                        </div>
+                            </section>
 
-                        <div class="row">
-                            <article class="col col-lg-8 col-xl">
-                                <h3 class="mb-1">Kundforum</h3>
-                                <p class="text-gray-dark">
-                                    Se vanliga frågor och svar samt ställ dina frågor i vårt digitala frågeforum.
+                            <section role="region" class="mb-3">
+                                <h3 class="mb-1"><i class="material-icons md-dark mr-1" aria-hidden="true">forum</i>Kundforum</h3>
+                                <p class="text--gray-dark">
+                                    Se vanliga frågor och svar samt ställ dina frågor i vårt <a href="https://forum.myh.se/">digitala frågeforum</a>.
                                 </p>
-                            </article>
-                        </div>
+                            </section>
 
-                        <div class="row">
-                            <article class="col col-lg-8 col-xl">
-                                <h3 class="mb-1">E-post</h3>
-                                <p class="text-gray-dark">
-                                    Allmänna frågor/synpunkter: info@myh.se
+                            <section role="region" class="mb-3">
+                                <h3 class="mb-1"><i class="material-icons md-dark mr-1" aria-hidden="true">email</i>E-post</h3>
+                                <p class="text--gray-dark">
+                                    Allmänna frågor/synpunkter: <a href="mailto:info@myh.se">info@myh.se</a>
                                 </p>
-                                <p class="text-gray-dark">
-                                    Registrator: registrator@myh.se
+                                <p class="text--gray-dark">
+                                    Registrator: <a href="mailto:registrator@myh.se">registrator@myh.se</a>
                                 </p>
-                                <p class="text-gray-dark">
-                                    Webbfrågor: webbredaktionen@myh.se
+                                <p class="text--gray-dark">
+                                    Webbfrågor: <a href="mailto:webbredaktionen@myh.se">webbredaktionen@myh.se</a>
                                 </p>
-                                <p class="text-gray-dark">
+                                <p class="text--gray-dark">
                                     Personlig e-post enligt fornamn.efternamn@myh.se
                                 </p>
-                            </article>
-                        </div>
+                            </section>
 
-                        <div class="row">
-                            <article class="col col-lg-8 col-xl">
+                            <section role="region" class="mb-3">
                                 <h3 class="mb-1">Postadress Västerås</h3>
-                                <p class="text-gray-dark">
+                                <p class="text--gray-dark">
                                     Myndigheten för yrkeshögskolan
                                     <br />
                                     Box 145
                                     <br />
                                     721 05 Västerås
                                 </p>
-                            </article>
-                        </div>
+                            </section>
 
-                        <div class="row">
-                            <article class="col col-lg-8 col-xl">
+                            <section role="region" class="mb-3">
                                 <h3 class="mb-1">Besöksadress Västerås</h3>
-                                <p class="text-gray-dark">
+                                <p class="text--gray-dark">
                                     Ingenjör Bååths gata 19
                                     <br />
                                     722 12 Västerås
@@ -305,135 +242,148 @@
                                     <br />
                                     Begränsade öppettider 1 nov: 9.00-11.00.
                                 </p>
-                            </article>
-                        </div>
+                            </section>
 
-                        <div class="row">
-                            <article class="col col-lg-8 col-xl">
+                            <section role="region" class="mb-3">
                                 <h3 class="mb-1">Postadress Hässleholm</h3>
-                                <p class="text-gray-dark">
+                                <p class="text--gray-dark">
                                     Myndigheten för yrkeshögskolan
                                     <br />
                                     Box 85
                                     <br />
                                     281 21 Hässleholm
                                 </p>
-                            </article>
-                        </div>
+                            </section>
 
-                        <div class="row">
-                            <article class="col col-lg-8 col-xl">
+                            <section role="region" class="mb-3">
                                 <h3 class="mb-1">Besöksadress Hässleholm</h3>
-                                <p class="text-gray-dark">
+                                <p class="text--gray-dark">
                                     Frykholmsgatan 10
                                     <br />
                                     281 31 Hässleholm
                                 </p>
-                            </article>
-                        </div>
+                            </section>
 
-                        <div class="row">
-                            <article class="col col-lg-8 col-xl">
+                            <section role="region" class="mb-3">
                                 <h3 class="mb-1">Organisationsnummer</h3>
-                                <p class="text-gray-dark">
+                                <p class="text--gray-dark">
                                     202100-6230
                                 </p>
-                            </article>
-                        </div>
+                            </section>
 
-                        <div class="row">
-                            <article class="col col-lg-8 col-xl">
+                            <section role="region" class="mb-3">
                                 <h3 class="mb-1">Skicka faktura</h3>
-                                <p class="text-gray-dark">
+                                <p class="text--gray-dark">
                                     Från och med den 1 april 2019 blir det lag på att alla inköp i offentlig sektor ska
-                                    faktureras med elektronisk faktura (e-faktura). Läs här om hur du kan fakturera oss
-                                    elektroniskt.
+                                    faktureras med elektronisk faktura (e-faktura).
+                                    <br />
+                                    <a href="https://www.myh.se/Om-oss/Fakturera-oss/">Läs här om hur du kan fakturera oss
+                                    elektroniskt.</a>
                                 </p>
-                            </article>
-                        </div>
+                            </section>
 
-                        <div class="row">
-                            <article class="col col-lg-8 col-xl">
+                            <section role="region" class="mb-3">
                                 <h3 class="mb-1">Bra att veta innan du kontaktar oss</h3>
-                                <p class="text-gray-dark">
+                                <p class="text--gray-dark">
                                     Myndigheten för yrkeshögskolan är en statlig myndighet. Det du skickar till oss via
-                                    e-post, post eller fax blir därför en allmän handling. Vi registrerar allmänna
-                                    handlingar och sparar dem i vårt diarium.
+                                    e-post, post eller fax blir därför en allmän handling.
+                                    <br />
+                                    Vi registrerar allmänna handlingar och sparar dem i vårt diarium.
                                 </p>
-                            </article>
-                        </div>
-                        <!-- Contact form -->
-                        <div>
-                            <article class="col col-lg-8 col-xl">
-                                <form action="POST">
-                                    <h3>Kontaktformulär</h3>
-                                    <p>Namn</p>
-                                    <input class="form-control" type="text" placeholder="För- och efternamn" value="" />
-                                    <p>E-post</p>
-                                    <input class="form-control" type="email" placeholder="E-post" value="" />
-                                    <p>Meddelande</p>
-                                    <textarea class="form-control" name="message" rows="10" cols="30"></textarea>
-                                    <br />
-                                    <button type="submit" class="btn">
-                                        Skicka
-                                    </button>
-                                    <br />
-                                    <br />
-                                </form>
-                            </article>
-                        </div>
+                            </section>
+
+                            <!-- Contact form -->
+                            <form role="form" action="POST" class="mb-3">
+                                <h3>Kontaktformulär</h3>
+                                <p class="mb-1">
+                                    <label for="name">För- och efternamn</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        class="form-control"
+                                        placeholder="För- och efternamn"
+                                        value=""
+                                    />
+                                </p>
+                                <p class="mb-1">
+                                    <label for="email">E-postadress</label>
+                                    <input type="email" id="email" class="form-control" placeholder="E-post" value="" />
+                                </p>
+                                <p class="mb-1">
+                                    <label for="message">Meddelande</label>
+                                    <textarea
+                                        name="message"
+                                        id="message"
+                                        class="form-control"
+                                        rows="10"
+                                        cols="30"
+                                    ></textarea>
+                                </p>
+                                <button type="submit" class="btn btn--lg btn--block">
+                                    Skicka
+                                </button>
+                            </form>
                         <!-- Map -->
-                        <div>
-                            <article class="col col-lg-8 col-xl">
-                                <h3>Hitta hit</h3>
-                                <div>
-                                    <div>
-                                        <iframe
-                                            src="https://maps.google.com/maps?q=myndigheten%20f%C3%B6r%20yrkesh%C3%B6gskolan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                                        ></iframe>
-                                    </div>
-                                    <p>
-                                        Visa Myndigheten för yrkeshögskolan på en
-                                        <a
-                                            href="https://www.google.com/maps/d/viewer?mid=1L3OUJ54Gc-DTrVXO42gGKPY9z6c&msa=0&ie=UTF8&t=m&vpsrc=6&ll=58.81374200000002%2C14.194336000000021&spn=9.11878%2C20.610352&z=5"
-                                        >
-                                            större karta.
-                                        </a>
-                                    </p>
-                                    <br />
-                                </div>
-                            </article>
-                        </div>
+                        <section role="region" class="mb-3">
+                            <h3><i class="material-icons md-dark mr-1">room</i>Hitta hit</h3>
+                            <iframe
+                                src="https://maps.google.com/maps?q=myndigheten%20f%C3%B6r%20yrkesh%C3%B6gskolan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            ></iframe>
+                            <p>
+                                Visa Myndigheten för yrkeshögskolan på en
+                                <a
+                                    href="https://www.google.com/maps/d/viewer?mid=1L3OUJ54Gc-DTrVXO42gGKPY9z6c&msa=0&ie=UTF8&t=m&vpsrc=6&ll=58.81374200000002%2C14.194336000000021&spn=9.11878%2C20.610352&z=5"
+                                    class="font-weight-bold"
+                                >
+                                    större karta.
+                                </a>
+                            </p>
+                        </section>
                     </section>
                 </div>
-            </div>
+            </article>
         </main>
 
-        <!-- Footer -->
-        <footer class="footer" role="contentinfo">
-            <div class="footer__container">
+        <footer role="contentinfo" class="footer">
+            <div class="footer__container container">
                 <section role="region">
                     <h2>Kontakt</h2>
-                    <h3>Telefon</h3>
-                    <p>
-                        Ring vår växel 010-209 01 00
+                    <h3>
+                        <i class="material-icons md-18 mr-1">phone</i>
+                        Telefon
+                    </h3>
+                    <p class="mb-1">
+                        Ring vår växel
+                        <a href="tel:010-2090100">010-209 01 00</a>
                         <br />
-                        Växeln är öppen vardagar 8.00 - 17.00
+                        Växeln är öppen vardagar
+                        <span class="text--white">8.00 - 17.00</span>
                     </p>
-                    <h3>Digital kundforum</h3>
-                    <p>
+                    <h3>
+                        <i class="material-icons md-18 mr-1">forum</i>
+                        Digitalt kundforum
+                    </h3>
+                    <p class="mb-1">
                         Se vanliga frågor och svar eller ställ frågor:
                         <br />
                         <a href="https://forum.myh.se/org/myndigheten-for-yrkeshogskola/">forum.myh.se</a>
                     </p>
-                    <h3>E-Post</h3>
-                    <p>
-                        Allmänna frågor/synpunkter: info@myh.se
+                    <h3>
+                        <i class="material-icons md-18 mr-1">email</i>
+                        E-post
+                    </h3>
+                    <p class="mb-1">
+                        Allmänna frågor/synpunkter:
+                        <a href="mailto:info@myh.se">info@myh.se</a>
                         <br />
-                        Registrator: registrator@myh.se
+                        Registrator:
+                        <a href="mailto:registrator@myh.se">registrator@myh.se</a>
                     </p>
-                    <h3>Adress</h3>
-                    <p>
+                    <h3>
+                        <i class="material-icons md-18 mr-1">room</i>
+                        Adress
+                    </h3>
+                    <p class="mb-3 mb-md-0">
                         Myndigheten för yrkeshögskolan
                         <br />
                         Box 145
@@ -443,7 +393,7 @@
                 </section>
                 <section role="region">
                     <h2>Om webbplatsen</h2>
-                    <p>
+                    <p class="mb-3">
                         <a href="https://www.myh.se/Om-webbplatsen/Anvanda-webbplatsen/">Använda webbplatsen</a>
                         <br />
                         <a href="https://www.myh.se/Om-webbplatsen/Webbkakor-pa-den-har-webbplatsen/">
@@ -454,20 +404,20 @@
                     </p>
                     <h2>Våra övriga webbplatser</h2>
                     <p>
-                        <a href="http://www.yrkeshogskolan.se">www.yrkeshogskolan.se</a>
+                        <a href="http://www.yrkeshogskolan.se" target="_blank">www.yrkeshogskolan.se</a>
                         <br />
-                        <a href="http://www.konstkulturutbildning.se">www.konstkulturutbildning.se</a>
+                        <a href="http://www.konstkulturutbildning.se" target="_blank">www.konstkulturutbildning.se</a>
                         <br />
-                        <a href="http://www.blitolk.nu">www.blitolk.nu</a>
+                        <a href="http://www.blitolk.nu" target="_blank">www.blitolk.nu</a>
                         <br />
-                        <a href="http://www.seqf.se">www.seqf.se</a>
+                        <a href="http://www.seqf.se" target="_blank">www.seqf.se</a>
                     </p>
                 </section>
             </div>
-            <section class="footer__bottom" role="region">
-                <a href="https://www.youtube.com/channel/UC8iPn0eKy-5vQ6Mx_-ep-KA">
+            <section role="region" class="footer__bottom">
+                <a href="https://www.youtube.com/channel/UC8iPn0eKy-5vQ6Mx_-ep-KA" target="_blank" aria-label="Youtube">
                     <svg
-                        class="footer__icon"
+                        class="footer__icon mb-1"
                         viewbox="0 0 234.66667 165.33333"
                         height="165.33333"
                         width="234.66667"
@@ -485,8 +435,8 @@
                     </svg>
                 </a>
 
-                <h2>Ansvarig utgivare</h2>
-                <p>Thomas Persson, generaldirektör MYH.</p>
+                <h2 class="mb-0">Ansvarig utgivare</h2>
+                <p class="text--muted">Thomas Persson, generaldirektör MYH.</p>
             </section>
         </footer>
     </body>
