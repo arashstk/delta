@@ -1,15 +1,7 @@
 .workingspace {
     margin-top: 15px;
 
-    .col {
-        // sm, md, lg, xl
-        @include create-breakpoint('sm') {
-        }
-
-        @include create-breakpoint('md') {
-        }
-
-        @include create-breakpoint('lg') {
-        }
+    .card {
+        height: 500px;
     }
 }
