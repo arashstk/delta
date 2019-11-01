@@ -1,26 +1,5 @@
-.content--style {
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-    ul {
-        list-style: none;
-    }
-    a {
-        text-decoration: none;
-        color: get-color('black');
-        display: block;
-        font-weight: bold;
-    }
-}
-
-.banner {
-    max-height: 650px;
-}
-
-.links-sidebar a {
-    &:hover {
-        background: get-color('gray-dark');
-        color: get-color('white');
+.content-style {
+    .banner {
+        max-height: 650px;
     }
 }
