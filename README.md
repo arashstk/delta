@@ -3,10 +3,10 @@
 In this project, we have redesigned the website www.myh.se and used https://minasidor.myh.se/ as inspiration for the color scheme.
 You can access the finished project here: http://lackikritsimas.chas.academy/u02-redesign-delta/
 
-* We used Sass to:
-    * make a 12-column grid system
-    * make functions and mixins for consistency
-    * make a component based structure
+* We used Sass to create:
+    * a 12-column grid system
+    * functions and mixins for consistency
+    * a component based structure
         * (most) components are written using BEM
 * In order to cooperate efficiently we:
     * used GitHub Projects 
