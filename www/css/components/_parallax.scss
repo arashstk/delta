@@ -3,22 +3,28 @@
 // If I don't get to do some javascript soon I'll be calling my lawyer!
 
 .parallax {
-    overflow: hidden;
+    @include create-breakpoint('sm') {
+        overflow: hidden;
+    }
 
     body {
-        height: 100vh;
-        overflow-x: hidden;
-        overflow-y: auto;
-        perspective: $parallax-perspective;
-        transform-style: preserve-3d;
-        scroll-behavior: smooth;
+        @include create-breakpoint('sm') {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: $parallax-perspective;
+            transform-style: preserve-3d;
+            scroll-behavior: smooth;
+        }
     }
 
     &__static {
-        // Edge fix
-        z-index: 0;
+        @include create-breakpoint('sm') {
+            // Edge fix
+            z-index: 0;
 
-        position: relative;
+            position: relative;
+        }
     }
 
     &__item {
@@ -29,19 +35,21 @@
         }
 
         &::before {
-            content: '';
-            z-index: -1;
-            position: absolute;
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            left: 0;
+            @include create-breakpoint('sm') {
+                content: '';
+                z-index: -1;
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+                top: 0;
+                left: 0;
 
-            transform: translateZ($parallax-translate-z - 1) scale(parallax-scale-factor($parallax-translate-z - 1));
+                transform: translateZ($parallax-translate-z - 1) scale(parallax-scale-factor($parallax-translate-z - 1));
 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
         }
     }
 }
