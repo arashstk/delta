@@ -110,6 +110,7 @@
 
     &__logo {
         height: 32px;
+        max-height: none;
         user-select: none;
 
         &--lg {
