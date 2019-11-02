@@ -20,9 +20,6 @@
 
     &__static {
         @include create-breakpoint('sm') {
-            // Edge fix
-            z-index: 0;
-
             position: relative;
         }
     }
@@ -37,7 +34,6 @@
         &::before {
             @include create-breakpoint('sm') {
                 content: '';
-                z-index: -1;
                 position: absolute;
                 width: 100vw;
                 height: 100vh;
