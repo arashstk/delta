@@ -4,7 +4,6 @@
 @import 'tools/mixins';
 @import 'tools/functions';
 @import 'tools/utilities';
-@import 'tools/overrides';
 
 // Components
 @import 'components/site';
@@ -21,11 +20,9 @@
 @import 'components/material-icons';
 
 // Pages
-@import 'pages/example';
-@import 'pages/index';
-@import 'pages/aboutus';
+@import 'pages/start';
+@import 'pages/about-us';
 @import 'pages/workingspace';
 @import 'pages/statistics';
 @import 'pages/publications';
 @import 'pages/newsroom';
-@import 'pages/contact';
